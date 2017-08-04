@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		46C24DDF1F34BB2900015A5F /* Drawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C24DDD1F34BB2900015A5F /* Drawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46C24DF31F34BC0B00015A5F /* BaseDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C24DEE1F34BC0B00015A5F /* BaseDrawView.swift */; };
-		46C24DF51F34BC0B00015A5F /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C24DF01F34BC0B00015A5F /* DrawView.swift */; };
 		46C24DF61F34BC0B00015A5F /* GestureDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C24DF11F34BC0B00015A5F /* GestureDrawView.swift */; };
 		46C24DF71F34BC0B00015A5F /* SimpleDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C24DF21F34BC0B00015A5F /* SimpleDrawView.swift */; };
 /* End PBXBuildFile section */
@@ -19,7 +18,6 @@
 		46C24DDD1F34BB2900015A5F /* Drawing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drawing.h; sourceTree = "<group>"; };
 		46C24DDE1F34BB2900015A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46C24DEE1F34BC0B00015A5F /* BaseDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseDrawView.swift; path = Classes/BaseDrawView.swift; sourceTree = "<group>"; };
-		46C24DF01F34BC0B00015A5F /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawView.swift; path = Classes/DrawView.swift; sourceTree = "<group>"; };
 		46C24DF11F34BC0B00015A5F /* GestureDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GestureDrawView.swift; path = Classes/GestureDrawView.swift; sourceTree = "<group>"; };
 		46C24DF21F34BC0B00015A5F /* SimpleDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleDrawView.swift; path = Classes/SimpleDrawView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				46C24DEE1F34BC0B00015A5F /* BaseDrawView.swift */,
-				46C24DF01F34BC0B00015A5F /* DrawView.swift */,
 				46C24DF11F34BC0B00015A5F /* GestureDrawView.swift */,
 				46C24DF21F34BC0B00015A5F /* SimpleDrawView.swift */,
 			);
@@ -155,7 +152,6 @@
 				46C24DF61F34BC0B00015A5F /* GestureDrawView.swift in Sources */,
 				46C24DF31F34BC0B00015A5F /* BaseDrawView.swift in Sources */,
 				46C24DF71F34BC0B00015A5F /* SimpleDrawView.swift in Sources */,
-				46C24DF51F34BC0B00015A5F /* DrawView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
