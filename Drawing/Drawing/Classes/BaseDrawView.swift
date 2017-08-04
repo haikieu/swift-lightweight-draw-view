@@ -29,8 +29,19 @@ open class BaseDrawView : UIView {
     open func startOver() { setNeedsDisplay() }
     open func undo() {}
     open func refresh() { setNeedsDisplay() }
+    open func exportImage () -> UIImage? { return takeSnapshotOfView()}
     
     //MARK: - Internal functions
     internal func commonInit() {}
     internal func debugInfo(_ string: String) { if isDebug {print(string)}}
+    
+    //MARK: - Private functions
+    private func takeSnapshotOfView() -> UIImage? {
+        UIGraphicsBeginImageContext(CGSize(width: self.frame.size.width, height: self.frame.size.height))
+        self.drawHierarchy(in: CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: self.frame.size.height), afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
 }
