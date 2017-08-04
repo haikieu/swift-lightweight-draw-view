@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SignatureDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icc-sy-wyH" customClass="SimpleDrawView" customModule="Drawing">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dG-Fb-u4V">
+                                        <rect key="frame" x="8" y="8" width="68" height="631"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6JG-41-he1">
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="649"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLR-i0-hHR" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="aLR-i0-hHR" secondAttribute="height" multiplier="1:1" id="Ql9-gu-5r8"/>
+                                                        </constraints>
+                                                        <state key="normal" image="new_page-32.png"/>
+                                                        <connections>
+                                                            <action selector="onStartOver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ve-p0-utR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qc5-Zq-fGg" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="83" width="68" height="68"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="qc5-Zq-fGg" secondAttribute="height" multiplier="1:1" id="gDj-e6-qW3"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Undo-32.png"/>
+                                                        <connections>
+                                                            <action selector="onUndo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U4E-SR-6Fj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lS-wK-smO" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="166" width="68" height="68"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="8lS-wK-smO" secondAttribute="height" multiplier="1:1" id="MDd-WO-7Ws"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Pen-32.png"/>
+                                                        <connections>
+                                                            <action selector="chooseBigPen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wEf-UK-Q7c"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ4-49-BMn" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="249" width="68" height="68"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="hQ4-49-BMn" secondAttribute="height" multiplier="1:1" id="VUb-E6-nfc"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Pen-16.png"/>
+                                                        <connections>
+                                                            <action selector="chooseSmallPen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RZE-4O-WIo"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eo9-eJ-zqI" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="332" width="68" height="68"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Eo9-eJ-zqI" secondAttribute="height" multiplier="1:1" id="InK-Da-CWL"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="chooseBlack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nvy-h8-J6S"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXf-pp-ufj" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="415" width="68" height="68"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="QXf-pp-ufj" secondAttribute="height" multiplier="1:1" id="AI1-lb-hzq"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="chooseBLue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZz-Y1-aKs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJ3-Av-beP" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="498" width="68" height="68"/>
+                                                        <color key="backgroundColor" red="1" green="0.86875027248169667" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="CJ3-Av-beP" secondAttribute="height" multiplier="1:1" id="UFJ-gQ-mXS"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="chooseYellow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9q-mh-AV1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNn-DO-7WE" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="581" width="68" height="68"/>
+                                                        <color key="backgroundColor" red="1" green="0.099398972863632973" blue="0.074344805842792572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="DNn-DO-7WE" secondAttribute="height" multiplier="1:1" id="f7X-PU-xIC"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="chooseRed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ie-ZL-F67"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="QXf-pp-ufj" firstAttribute="width" secondItem="QXf-pp-ufj" secondAttribute="height" multiplier="1:1" id="2d4-f8-cLD"/>
+                                                    <constraint firstItem="Eo9-eJ-zqI" firstAttribute="width" secondItem="Eo9-eJ-zqI" secondAttribute="height" multiplier="1:1" id="9au-Bt-eKn"/>
+                                                    <constraint firstItem="hQ4-49-BMn" firstAttribute="width" secondItem="hQ4-49-BMn" secondAttribute="height" multiplier="1:1" id="CSK-Eo-qdZ"/>
+                                                    <constraint firstItem="DNn-DO-7WE" firstAttribute="width" secondItem="DNn-DO-7WE" secondAttribute="height" multiplier="1:1" id="L2t-UP-v9g"/>
+                                                    <constraint firstItem="DNn-DO-7WE" firstAttribute="width" secondItem="DNn-DO-7WE" secondAttribute="height" multiplier="1:1" id="Pus-Xu-eD9"/>
+                                                    <constraint firstItem="CJ3-Av-beP" firstAttribute="width" secondItem="CJ3-Av-beP" secondAttribute="height" multiplier="1:1" id="TNr-sc-Ziq"/>
+                                                    <constraint firstItem="CJ3-Av-beP" firstAttribute="width" secondItem="CJ3-Av-beP" secondAttribute="height" multiplier="1:1" id="Vqr-rt-ozh"/>
+                                                    <constraint firstItem="8lS-wK-smO" firstAttribute="width" secondItem="8lS-wK-smO" secondAttribute="height" multiplier="1:1" id="WpQ-s3-7i3"/>
+                                                    <constraint firstItem="QXf-pp-ufj" firstAttribute="width" secondItem="QXf-pp-ufj" secondAttribute="height" multiplier="1:1" id="bgO-O7-MOZ"/>
+                                                    <constraint firstItem="hQ4-49-BMn" firstAttribute="width" secondItem="hQ4-49-BMn" secondAttribute="height" multiplier="1:1" id="emr-GS-zRj"/>
+                                                    <constraint firstItem="DNn-DO-7WE" firstAttribute="width" secondItem="DNn-DO-7WE" secondAttribute="height" multiplier="1:1" id="hMj-Ra-N1o"/>
+                                                    <constraint firstItem="CJ3-Av-beP" firstAttribute="width" secondItem="CJ3-Av-beP" secondAttribute="height" multiplier="1:1" id="haa-2h-LGJ"/>
+                                                    <constraint firstItem="hQ4-49-BMn" firstAttribute="width" secondItem="hQ4-49-BMn" secondAttribute="height" multiplier="1:1" id="ifx-8w-9cp"/>
+                                                    <constraint firstItem="qc5-Zq-fGg" firstAttribute="width" secondItem="qc5-Zq-fGg" secondAttribute="height" multiplier="1:1" id="jmX-ok-Jgi"/>
+                                                    <constraint firstItem="Eo9-eJ-zqI" firstAttribute="width" secondItem="Eo9-eJ-zqI" secondAttribute="height" multiplier="1:1" id="jsD-PS-WaC"/>
+                                                    <constraint firstItem="Eo9-eJ-zqI" firstAttribute="width" secondItem="Eo9-eJ-zqI" secondAttribute="height" multiplier="1:1" id="m7v-iE-BQw"/>
+                                                    <constraint firstItem="8lS-wK-smO" firstAttribute="width" secondItem="8lS-wK-smO" secondAttribute="height" multiplier="1:1" id="uf8-Jb-chp"/>
+                                                    <constraint firstItem="QXf-pp-ufj" firstAttribute="width" secondItem="QXf-pp-ufj" secondAttribute="height" multiplier="1:1" id="xVK-Tl-zRy"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="68" id="A4Z-re-6Ct"/>
+                                            <constraint firstAttribute="trailing" secondItem="6JG-41-he1" secondAttribute="trailing" id="Ibi-a9-B1a"/>
+                                            <constraint firstItem="6JG-41-he1" firstAttribute="leading" secondItem="5dG-Fb-u4V" secondAttribute="leading" id="haU-ri-BLf"/>
+                                            <constraint firstItem="6JG-41-he1" firstAttribute="top" secondItem="5dG-Fb-u4V" secondAttribute="top" id="vOW-Jn-XAH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5dG-Fb-u4V" secondAttribute="bottom" constant="8" id="7D3-bt-hN9"/>
+                                    <constraint firstItem="5dG-Fb-u4V" firstAttribute="top" secondItem="icc-sy-wyH" secondAttribute="top" constant="8" id="S25-ck-eGx"/>
+                                    <constraint firstItem="5dG-Fb-u4V" firstAttribute="leading" secondItem="icc-sy-wyH" secondAttribute="leading" constant="8" id="oNS-qV-NAn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="icc-sy-wyH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5IY-dg-XXY"/>
+                            <constraint firstItem="icc-sy-wyH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fiH-Fk-28R"/>
+                            <constraint firstAttribute="trailing" secondItem="icc-sy-wyH" secondAttribute="trailing" id="jqz-j9-hhl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="icc-sy-wyH" secondAttribute="bottom" id="rQi-Wm-WNA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawView" destination="icc-sy-wyH" id="iG3-Qh-Xqr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Pen-16.png" width="16" height="16"/>
+        <image name="Pen-32.png" width="32" height="32"/>
+        <image name="Undo-32.png" width="32" height="32"/>
+        <image name="new_page-32.png" width="32" height="32"/>
+    </resources>
+</document>
