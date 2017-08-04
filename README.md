@@ -14,5 +14,5 @@ It's implemented by using a pan gesture, or using view touch event approaches.
 ***Up coming features
 + Export file
 
-![Simple draw view](https://raw.githubusercontent.com/haikieu/swift-lightweight-draw-view/master/screenshot.png)
+![Simple draw view](https://raw.githubusercontent.com/haikieu/swift-lightweight-draw-view/master/screenshot_small.png)
 
