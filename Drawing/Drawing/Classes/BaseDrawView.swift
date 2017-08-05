@@ -40,15 +40,6 @@ open class BaseDrawView : UIView {
     internal func commonInit() {}
     internal func debugInfo(_ string: String) { if debugInfo {print(string)}}
     
-    //MARK: - Private functions
-    private func takeSnapshotOfView() -> UIImage? {
-        UIGraphicsBeginImageContext(CGSize(width: self.frame.size.width, height: self.frame.size.height))
-        self.drawHierarchy(in: CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: self.frame.size.height), afterScreenUpdates: true)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
     //MARK: - Draw handling
     open override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -74,7 +65,7 @@ open class BaseDrawView : UIView {
         ctx.flush()
     }
     
-    private func drawByEclipse(_ path: [CGPoint]) {
+    private func drawDot(_ path: [CGPoint]) {
         guard let ctx = UIGraphicsGetCurrentContext() else { return }
         
         ctx.setStrokeColor(strokeColor.cgColor)
@@ -110,24 +101,13 @@ open class BaseDrawView : UIView {
         ctx.fillPath()
         ctx.flush()
     }
-    
-    private func drawByQuad(_ path: [CGPoint]) {
-        guard let ctx = UIGraphicsGetCurrentContext() else { return }
-        guard path.count > 2 else { return }
-        
-        ctx.setStrokeColor(strokeColor.cgColor)
-        ctx.setFillColor(fillColor.cgColor)
-        ctx.setLineWidth(thick)
-        
-        for (i, point) in path.enumerated() {
-            if i+1 >= path.count || i+2 >= path.count {
-                break
-            }
-            ctx.move(to: point)
-            ctx.addQuadCurve(to: path[i+2], control: path[i+1])
-        }
-        ctx.strokePath()
-        ctx.fillPath()
-        ctx.flush()
+
+    //MARK: - Private functions
+    private func takeSnapshotOfView() -> UIImage? {
+        UIGraphicsBeginImageContext(CGSize(width: self.frame.size.width, height: self.frame.size.height))
+        self.drawHierarchy(in: CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: self.frame.size.height), afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
     }
 }
