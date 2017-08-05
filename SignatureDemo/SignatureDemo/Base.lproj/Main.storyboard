@@ -53,8 +53,19 @@
                                                             <action selector="onUndo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U4E-SR-6Fj"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lS-wK-smO" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tB-G8-qaF" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="166" width="68" height="68"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="3tB-G8-qaF" secondAttribute="height" multiplier="1:1" id="iGI-dq-fG9"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Info-32.png"/>
+                                                        <connections>
+                                                            <action selector="onDebugging:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNp-BP-KDc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lS-wK-smO" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="249" width="68" height="68"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="8lS-wK-smO" secondAttribute="height" multiplier="1:1" id="MDd-WO-7Ws"/>
@@ -65,7 +76,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ4-49-BMn" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="249" width="68" height="68"/>
+                                                        <rect key="frame" x="0.0" y="332" width="68" height="68"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="hQ4-49-BMn" secondAttribute="height" multiplier="1:1" id="VUb-E6-nfc"/>
@@ -76,7 +87,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eo9-eJ-zqI" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="332" width="68" height="68"/>
+                                                        <rect key="frame" x="0.0" y="415" width="68" height="68"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Eo9-eJ-zqI" secondAttribute="height" multiplier="1:1" id="InK-Da-CWL"/>
@@ -86,23 +97,13 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXf-pp-ufj" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="415" width="68" height="68"/>
+                                                        <rect key="frame" x="0.0" y="498" width="68" height="68"/>
                                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="QXf-pp-ufj" secondAttribute="height" multiplier="1:1" id="AI1-lb-hzq"/>
                                                         </constraints>
                                                         <connections>
                                                             <action selector="chooseBLue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZz-Y1-aKs"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJ3-Av-beP" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="498" width="68" height="68"/>
-                                                        <color key="backgroundColor" red="1" green="0.86875027248169667" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="CJ3-Av-beP" secondAttribute="height" multiplier="1:1" id="UFJ-gQ-mXS"/>
-                                                        </constraints>
-                                                        <connections>
-                                                            <action selector="chooseYellow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9q-mh-AV1"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNn-DO-7WE" customClass="Button" customModule="SignatureDemo" customModuleProvider="target">
@@ -120,15 +121,14 @@
                                                     <constraint firstItem="QXf-pp-ufj" firstAttribute="width" secondItem="QXf-pp-ufj" secondAttribute="height" multiplier="1:1" id="2d4-f8-cLD"/>
                                                     <constraint firstItem="Eo9-eJ-zqI" firstAttribute="width" secondItem="Eo9-eJ-zqI" secondAttribute="height" multiplier="1:1" id="9au-Bt-eKn"/>
                                                     <constraint firstItem="hQ4-49-BMn" firstAttribute="width" secondItem="hQ4-49-BMn" secondAttribute="height" multiplier="1:1" id="CSK-Eo-qdZ"/>
+                                                    <constraint firstItem="3tB-G8-qaF" firstAttribute="width" secondItem="3tB-G8-qaF" secondAttribute="height" multiplier="1:1" id="GFv-VY-jZO"/>
                                                     <constraint firstItem="DNn-DO-7WE" firstAttribute="width" secondItem="DNn-DO-7WE" secondAttribute="height" multiplier="1:1" id="L2t-UP-v9g"/>
                                                     <constraint firstItem="DNn-DO-7WE" firstAttribute="width" secondItem="DNn-DO-7WE" secondAttribute="height" multiplier="1:1" id="Pus-Xu-eD9"/>
-                                                    <constraint firstItem="CJ3-Av-beP" firstAttribute="width" secondItem="CJ3-Av-beP" secondAttribute="height" multiplier="1:1" id="TNr-sc-Ziq"/>
-                                                    <constraint firstItem="CJ3-Av-beP" firstAttribute="width" secondItem="CJ3-Av-beP" secondAttribute="height" multiplier="1:1" id="Vqr-rt-ozh"/>
                                                     <constraint firstItem="8lS-wK-smO" firstAttribute="width" secondItem="8lS-wK-smO" secondAttribute="height" multiplier="1:1" id="WpQ-s3-7i3"/>
                                                     <constraint firstItem="QXf-pp-ufj" firstAttribute="width" secondItem="QXf-pp-ufj" secondAttribute="height" multiplier="1:1" id="bgO-O7-MOZ"/>
+                                                    <constraint firstItem="3tB-G8-qaF" firstAttribute="width" secondItem="3tB-G8-qaF" secondAttribute="height" multiplier="1:1" id="dc4-vz-k6O"/>
                                                     <constraint firstItem="hQ4-49-BMn" firstAttribute="width" secondItem="hQ4-49-BMn" secondAttribute="height" multiplier="1:1" id="emr-GS-zRj"/>
                                                     <constraint firstItem="DNn-DO-7WE" firstAttribute="width" secondItem="DNn-DO-7WE" secondAttribute="height" multiplier="1:1" id="hMj-Ra-N1o"/>
-                                                    <constraint firstItem="CJ3-Av-beP" firstAttribute="width" secondItem="CJ3-Av-beP" secondAttribute="height" multiplier="1:1" id="haa-2h-LGJ"/>
                                                     <constraint firstItem="hQ4-49-BMn" firstAttribute="width" secondItem="hQ4-49-BMn" secondAttribute="height" multiplier="1:1" id="ifx-8w-9cp"/>
                                                     <constraint firstItem="qc5-Zq-fGg" firstAttribute="width" secondItem="qc5-Zq-fGg" secondAttribute="height" multiplier="1:1" id="jmX-ok-Jgi"/>
                                                     <constraint firstItem="Eo9-eJ-zqI" firstAttribute="width" secondItem="Eo9-eJ-zqI" secondAttribute="height" multiplier="1:1" id="jsD-PS-WaC"/>
@@ -173,6 +173,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Info-32.png" width="32" height="32"/>
         <image name="Pen-16.png" width="16" height="16"/>
         <image name="Pen-32.png" width="32" height="32"/>
         <image name="Undo-32.png" width="32" height="32"/>

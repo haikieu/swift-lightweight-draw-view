@@ -16,7 +16,7 @@ open class BaseDrawView : UIView {
     
     ///Enable debugging mode
     open var debugInfo = DEBUG
-    open var debugPath = true { didSet { refresh()}}
+    open var debugPath = false { didSet { refresh()}}
     
     //MARK: - Base properties
     open var strokeColor : UIColor = .black { didSet { refresh()}}

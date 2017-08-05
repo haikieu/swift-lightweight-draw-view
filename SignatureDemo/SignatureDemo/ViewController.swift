@@ -24,9 +24,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onStartOver(_ sender: Any) {
-        drawView.startOver()
+        UIView.transition(with: drawView, duration: 1, options: .transitionCurlUp, animations: { 
+            self.drawView.startOver()
+        }) { (Bool) in
+            
+        }   
     }
 
+    @IBAction func onDebugging(_ sender: Any) {
+        drawView.debugPath = !drawView.debugPath
+    }
+    
     @IBAction func onUndo(_ sender: Any) {
         drawView.undo()
     }
