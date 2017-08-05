@@ -68,8 +68,8 @@
 		355B4D3D1F33DA9A002D1479 = {
 			isa = PBXGroup;
 			children = (
-				46C24DE91F34BBC800015A5F /* Drawing.framework */,
 				355B4D481F33DA9A002D1479 /* SignatureDemo */,
+				469A92EC1F3692310083AED5 /* Frameworks */,
 				355B4D471F33DA9A002D1479 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +100,14 @@
 				355B4D891F34432C002D1479 /* Button.swift */,
 			);
 			name = Demo;
+			sourceTree = "<group>";
+		};
+		469A92EC1F3692310083AED5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46C24DE91F34BBC800015A5F /* Drawing.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		46C24DF81F34BC8F00015A5F /* Assets */ = {
