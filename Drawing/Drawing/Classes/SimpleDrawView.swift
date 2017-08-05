@@ -96,6 +96,6 @@ public class SimpleDrawView : BaseDrawView {
             ctx.setLineWidth(lineWidth)
         }
         ctx.strokePath()
-        ctx.flush()    
+        ctx.flush()
     }
 }
