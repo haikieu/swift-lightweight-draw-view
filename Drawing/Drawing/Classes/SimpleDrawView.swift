@@ -26,12 +26,6 @@ public class SimpleDrawView : BaseDrawView {
         self.isExclusiveTouch = true
     }
     
-    var originalPoint : CGPoint? = nil
-    var fromPoint : CGPoint? = nil
-    var toPoint : CGPoint? = nil
-    var path = [CGPoint]()
-    var paths = [[CGPoint]]()
-    
     public override func startOver() {
         super.startOver()
         originalPoint = nil
@@ -71,6 +65,7 @@ public class SimpleDrawView : BaseDrawView {
         toPoint = nil
         paths.append(path)
         path.removeAll()
+        refresh()
     }
     
     public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -79,23 +74,6 @@ public class SimpleDrawView : BaseDrawView {
         fromPoint = nil
         toPoint = nil
         path.removeAll()
-    }
-    
-    public override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        for path in paths { drawPath(path) }
-        drawPath(path)
-    }
-    
-    private func drawPath(_ path: [CGPoint]) {
-        guard let ctx = UIGraphicsGetCurrentContext() else { return }
-        if path.count > 1 {
-            ctx.move(to: path.first!)
-            ctx.addLines(between: path)
-            ctx.setStrokeColor(strokeColor.cgColor)
-            ctx.setLineWidth(lineWidth)
-        }
-        ctx.strokePath()
-        ctx.flush()
+        refresh()
     }
 }

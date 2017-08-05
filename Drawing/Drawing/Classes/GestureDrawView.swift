@@ -30,12 +30,6 @@ public class GestureDrawView : BaseDrawView {
         _ = self.gesture //Initialize gesture
     }
     
-    var originalPoint : CGPoint? = nil
-    var fromPoint : CGPoint? = nil
-    var toPoint : CGPoint? = nil
-    var path = [CGPoint]()
-    var paths = [[CGPoint]]()
-    
     public override func startOver() {
         super.startOver()
         originalPoint = nil
@@ -86,23 +80,5 @@ public class GestureDrawView : BaseDrawView {
             refresh()
             return
         }
-    }
-    
-    public override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        for path in paths { drawPath(path) }
-        drawPath(path)
-    }
-    
-    private func drawPath(_ path: [CGPoint]) {
-        guard let ctx = UIGraphicsGetCurrentContext() else { return }
-        if path.count > 1 {
-            ctx.move(to: path.first!)
-            ctx.addLines(between: path)
-            ctx.setStrokeColor(strokeColor.cgColor)
-            ctx.setLineWidth(lineWidth)
-        }
-        ctx.strokePath()
-        ctx.flush()
     }
 }

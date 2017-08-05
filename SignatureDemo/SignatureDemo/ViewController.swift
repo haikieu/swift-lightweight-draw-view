@@ -31,23 +31,27 @@ class ViewController: UIViewController {
         drawView.undo()
     }
     @IBAction func chooseBigPen(_ sender: Any) {
-        drawView.lineWidth = min(drawView.lineWidth + 1, 15)
+        drawView.thick = min(drawView.thick + 1, 15)
     }
     
     @IBAction func chooseSmallPen(_ sender: Any) {
-        drawView.lineWidth = max(drawView.lineWidth - 1, 1)
+        drawView.thick = max(drawView.thick - 1, 1)
     }
     @IBAction func chooseBlack(_ sender: Any) {
         drawView.strokeColor = .black
+        drawView.fillColor = .black
     }
     @IBAction func chooseBLue(_ sender: Any) {
         drawView.strokeColor = .blue
+        drawView.fillColor = .blue
     }
     @IBAction func chooseYellow(_ sender: Any) {
         drawView.strokeColor = .yellow
+        drawView.fillColor = .yellow
     }
     @IBAction func chooseRed(_ sender: Any) {
         drawView.strokeColor = .red
+        drawView.fillColor = .red
     }
 }
 
