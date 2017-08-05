@@ -47,7 +47,7 @@ public class GestureDrawView : BaseDrawView {
     }
     
     public override func undo() {
-        if path.count > 0 { paths.removeLast() }
+        if paths.count > 0 { paths.removeLast() }
         refresh()
     }
     
@@ -101,7 +101,8 @@ public class GestureDrawView : BaseDrawView {
             ctx.addLines(between: path)
             ctx.setStrokeColor(strokeColor.cgColor)
             ctx.setLineWidth(lineWidth)
-            ctx.strokePath()
         }
+        ctx.strokePath()
+        ctx.flush()
     }
 }

@@ -94,7 +94,8 @@ public class SimpleDrawView : BaseDrawView {
             ctx.addLines(between: path)
             ctx.setStrokeColor(strokeColor.cgColor)
             ctx.setLineWidth(lineWidth)
-            ctx.strokePath()
         }
+        ctx.strokePath()
+        ctx.flush()    
     }
 }
