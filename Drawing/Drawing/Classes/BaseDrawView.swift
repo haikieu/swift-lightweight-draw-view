@@ -24,8 +24,8 @@ open class BaseDrawView : UIView {
     open var thick : CGFloat = 5 { didSet { refresh()}}
     
     //MARK: - Common functions
-    open func startOver() { setNeedsDisplay() }
-    open func undo() {}
+    open func startOver() { paths.removeAll(); path.removeAll(); refresh() }
+    open func undo() {  if paths.count > 0 { paths.removeLast(); refresh() }}
     open func refresh() { setNeedsDisplay() }
     open func exportImage () -> UIImage? { return takeSnapshotOfView()}
     

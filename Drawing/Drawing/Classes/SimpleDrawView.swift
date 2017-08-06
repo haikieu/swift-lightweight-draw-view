@@ -26,18 +26,6 @@ public class SimpleDrawView : BaseDrawView {
         self.isExclusiveTouch = true
     }
     
-    public override func startOver() {
-        super.startOver()
-        path.removeAll()
-        paths.removeAll()
-        refresh()
-    }
-    
-    public override func undo() {
-        if paths.count > 0 { paths.removeLast() }
-        refresh()
-    }
-    
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         debugInfo("touchesBegan")
     }
