@@ -28,9 +28,6 @@ public class SimpleDrawView : BaseDrawView {
     
     public override func startOver() {
         super.startOver()
-        originalPoint = nil
-        fromPoint = nil
-        toPoint = nil
         path.removeAll()
         paths.removeAll()
         refresh()
@@ -43,11 +40,6 @@ public class SimpleDrawView : BaseDrawView {
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         debugInfo("touchesBegan")
-        guard let touch = touches.first else { return }
-        let newPoint = touch.preciseLocation(in: self)
-        originalPoint = newPoint
-        fromPoint = newPoint
-        toPoint = newPoint
     }
     
     public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -60,9 +52,6 @@ public class SimpleDrawView : BaseDrawView {
     
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         debugInfo("touchesEnded")
-        originalPoint = nil
-        fromPoint = nil
-        toPoint = nil
         paths.append(path)
         path.removeAll()
         refresh()
@@ -70,9 +59,6 @@ public class SimpleDrawView : BaseDrawView {
     
     public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         debugInfo("touchesCancelled")
-        originalPoint = nil
-        fromPoint = nil
-        toPoint = nil
         path.removeAll()
         refresh()
     }

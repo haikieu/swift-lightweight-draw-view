@@ -32,9 +32,6 @@ public class GestureDrawView : BaseDrawView {
     
     public override func startOver() {
         super.startOver()
-        originalPoint = nil
-        fromPoint = nil
-        toPoint = nil
         path.removeAll()
         paths.removeAll()
         refresh()
@@ -51,21 +48,13 @@ public class GestureDrawView : BaseDrawView {
         
         switch gesture.state {
         case .began:
-            originalPoint = newPoint
-            fromPoint = newPoint
-            toPoint = newPoint
             return
         case .changed:
-            fromPoint = toPoint
-            toPoint = newPoint
             path.append(newPoint)
             refresh()
             return
             
         case .ended:
-            originalPoint = nil
-            fromPoint = nil
-            toPoint = nil
             paths.append(path)
             refresh()
             return
@@ -73,9 +62,6 @@ public class GestureDrawView : BaseDrawView {
         case .cancelled,.failed:
             fallthrough
         default:
-            originalPoint = nil
-            fromPoint = nil
-            toPoint = nil
             path.removeAll()
             refresh()
             return

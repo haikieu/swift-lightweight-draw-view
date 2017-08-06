@@ -30,9 +30,6 @@ open class BaseDrawView : UIView {
     open func exportImage () -> UIImage? { return takeSnapshotOfView()}
     
     //MARK: - Internal properties
-    internal var originalPoint : CGPoint? = nil
-    internal var fromPoint : CGPoint? = nil
-    internal var toPoint : CGPoint? = nil
     internal var path = [CGPoint]()
     internal var paths = [[CGPoint]]()
     
